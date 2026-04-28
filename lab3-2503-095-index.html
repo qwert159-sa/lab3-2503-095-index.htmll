@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春韵 · 数字展销平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/lab3-CS2024-101-index.css">
+</head>
+<body>
+<header id="main-header">
+    <div class="header-container">
+        <div class="logo-area">
+            <img src="img/spring-logo.svg" alt="春韵logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+            <span class="logo-text"><i class="fas fa-leaf"></i> 春韵·书屋</span>
+            <span class="logo-title">春韵书坊</span>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-list clearfix">
+                <li><a href="#"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> 展销</a></li>
+                <li><a href="#"><i class="fas fa-fire"></i> 热门</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> 新书</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> 我的</a></li>
+                <li class="login-wrapper">
+                    <input type="checkbox" id="loginCheckbox">
+                    <label for="loginCheckbox" class="login-trigger"><i class="fas fa-sign-in-alt"></i> 登录</label>
+                    <div class="login-style">
+                        <label for="loginCheckbox" class="close-btn">&times;</label>
+                        <div class="header">
+                            <ul class="pass">
+                                <li><a href="javascript:void(0)">密码登录</a><span class="line">|</span></li>
+                                <li><a href="javascript:void(0)">验证码登录</a></li>
+                            </ul>
+                        </div>
+                        <div class="mains login-panel" id="loginPanel">
+                            <form onsubmit="return false;">
+                                <input type="text" id="loginAccount" placeholder="手机号/昵称/邮箱">
+                                <input type="password" id="loginPassword" placeholder="密码">
+                            </form>
+                            <p class="agree">登录即同意<a href="#!">用户协议,隐私政策</a></p>
+                            <div class="but">
+                                <input type="submit" value="登录" id="loginSubmitBtn">
+                            </div>
+                            <ul class="register">
+                                <li><a id="goRegisterLink">立即注册</a></li>
+                                <li><a href="#!">忘记密码</a></li>
+                            </ul>
+                            <div class="msg" id="loginMsg"></div>
+                        </div>
+                        <div class="mains register-panel" id="registerPanel">
+                            <form onsubmit="return false;">
+                                <input type="text" id="regUsername" placeholder="用户名">
+                                <input type="email" id="regEmail" placeholder="邮箱（作为账号）">
+                                <input type="password" id="regPassword" placeholder="密码（至少6位）">
+                                <input type="password" id="regConfirm" placeholder="确认密码">
+                            </form>
+                            <div class="but">
+                                <input type="submit" value="注册" id="registerSubmitBtn">
+                            </div>
+                            <ul class="register">
+                                <li><a id="goLoginLink">返回登录</a></li>
+                            </ul>
+                            <div class="msg" id="regMsg"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container main-wrapper">
+    <aside class="sidebar left-sidebar">
+        <div class="sidebar-card">
+            <h3><i class="fas fa-list-ul"></i> 图书分类</h3>
+            <ul class="category-nav">
+                <li><a href="#">📖 文学小说</a></li>
+                <li><a href="#">📚 人文社科</a></li>
+                <li><a href="#">💻 计算机技术</a></li>
+                <li><a href="#">🎨 艺术设计</a></li>
+                <li><a href="#">🧒 少儿读物</a></li>
+                <li><a href="#">🌱 生活·园艺</a></li>
+                <li><a href="#">📈 经济管理</a></li>
+                <li><a href="#">🔬 科普百科</a></li>
+            </ul>
+        </div>
+        <div class="season-tip"><i class="fas fa-seedling"></i> 春韵·阅读正当时</div>
+    </aside>
+
+    <main class="content middle-content">
+        <section class="showcase">
+            <h2 class="section-title"><span>🌸 主编力荐 · 春韵书单</span></h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="85.avif" alt="春日序曲" style="width:100%; height:auto;">
+                        <span class="cover-text">春之森</span>
+                    </div>
+                    <h4>《春日序曲》</h4>
+                    <p class="author">陈春和</p>
+                    <div class="hover-info">
+                        <div class="price">¥48.00</div>
+                        <div class="author-line">作者：陈春和</div>
+                        <a href="#" class="buy-btn">立即购买</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="23235354-1_u_1.jpg" alt="风中的纸屑" style="width:100%; height:auto;">
+                        <span class="cover-text">风之语</span>
+                    </div>
+                    <h4>《风中的纸屑》</h4>
+                    <p class="author">周晓风</p>
+                    <div class="hover-info">
+                        <div class="price">¥52.00</div>
+                        <div class="author-line">作者：周晓风</div>
+                        <a href="#" class="buy-btn">立即购买</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="B7A4EF600AC51AC9BA49565A266_1AE6353C_2385F.png" alt="山谷微风" style="width:100%; height:auto;">
+                        <span class="cover-text">暖阳集</span>
+                    </div>
+                    <h4>《山谷微风》</h4>
+                    <p class="author">余华</p>
+                    <div class="hover-info">
+                        <div class="price">¥59.00</div>
+                        <div class="author-line">作者：余华</div>
+                        <a href="#" class="buy-btn">立即购买</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-books">
+            <h2 class="section-title"><span>新书上市</span></h2>
+            <table class="book-table">
+                <thead><tr><th>书名</th><th>作者</th><th>定价</th><th>上架时间</th></tr></thead>
+                <tbody>
+                    <tr><td>《去有风的旷野》</td><td>阿来</td><td>¥59.00</td><td>2026-03-15</td></tr>
+                    <tr><td>《食南之徒》</td><td>马伯庸</td><td>¥68.00</td><td>2026-02-28</td></tr>
+                    <tr><td>《山谷微风》</td><td>余华</td><td>¥49.50</td><td>2026-04-01</td></tr>
+                    <tr><td>《我们生活在巨大的差距里》</td><td>余华</td><td>¥42.00</td><td>2026-03-20</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<aside class="right-fixed-ad">
+    <div class="ad-card secondary">
+        <p><i class="fas fa-truck"></i> 春日包邮 · 满39免运费</p>
+        <p class="small">新用户专享10元券</p>
+        <button class="fake-btn"><i class="fas fa-chevron-circle-right"></i> 立即领取</button>
+    </div>
+</aside>
+
+<footer>
+    <p>© 2026 春韵数字展销平台 · 实验任务 lab2-CS2024-101-index.html</p>
+</footer>
+
+<script>
+(function() {
+    const STORAGE_KEY = 'chunyun_users';
+    function getUsers() { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+    function saveUsers(users) { localStorage.setItem(STORAGE_KEY, JSON.stringify(users)); }
+    function emailExists(email) { return getUsers().some(u => u.email === email); }
+
+    if (!getUsers().some(u => u.email === 'demo@chunyun.com')) {
+        saveUsers([...getUsers(), { username: '春韵读者', email: 'demo@chunyun.com', password: '123456' }]);
+    }
+
+    const loginPanel = document.getElementById('loginPanel');
+    const regPanel = document.getElementById('registerPanel');
+    document.getElementById('goRegisterLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        loginPanel.style.display = 'none';
+        regPanel.style.display = 'block';
+        document.getElementById('loginMsg').textContent = '';
+        document.getElementById('regMsg').textContent = '';
+    });
+    document.getElementById('goLoginLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        loginPanel.style.display = 'block';
+        regPanel.style.display = 'none';
+        document.getElementById('loginMsg').textContent = '';
+        document.getElementById('regMsg').textContent = '';
+    });
+
+    document.getElementById('registerSubmitBtn').addEventListener('click', function() {
+        const username = document.getElementById('regUsername').value.trim();
+        const email = document.getElementById('regEmail').value.trim();
+        const password = document.getElementById('regPassword').value;
+        const confirm = document.getElementById('regConfirm').value;
+        const msg = document.getElementById('regMsg');
+
+        if (!username || !email || !password || !confirm) { msg.textContent = '所有字段必填'; return; }
+        if (!/^\S+@\S+\.\S+$/.test(email)) { msg.textContent = '邮箱格式不正确'; return; }
+        if (password.length < 6) { msg.textContent = '密码至少6位'; return; }
+        if (password !== confirm) { msg.textContent = '两次密码不一致'; return; }
+        if (emailExists(email)) { msg.textContent = '该邮箱已注册'; return; }
+
+        const users = getUsers();
+        users.push({ username, email, password });
+        saveUsers(users);
+
+        msg.style.color = '#27ae60';
+        msg.textContent = '注册成功！即将返回登录';
+        document.getElementById('regUsername').value = '';
+        document.getElementById('regEmail').value = '';
+        document.getElementById('regPassword').value = '';
+        document.getElementById('regConfirm').value = '';
+        setTimeout(function() {
+            loginPanel.style.display = 'block';
+            regPanel.style.display = 'none';
+            document.getElementById('loginAccount').value = email;
+            msg.style.color = '#e74c3c';
+            msg.textContent = '';
+        }, 1500);
+    });
+
+    document.getElementById('loginSubmitBtn').addEventListener('click', function() {
+        const account = document.getElementById('loginAccount').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        const msg = document.getElementById('loginMsg');
+
+        if (!account || !password) { msg.textContent = '请输入账号和密码'; return; }
+        const users = getUsers();
+        const user = users.find(u => (u.email === account || u.username === account) && u.password === password);
+        if (!user) { msg.textContent = '账号或密码错误'; return; }
+
+        msg.style.color = '#27ae60';
+        msg.textContent = '登录成功！欢迎，' + user.username;
+        setTimeout(function() {
+            document.getElementById('loginCheckbox').checked = false;
+            document.getElementById('loginAccount').value = '';
+            document.getElementById('loginPassword').value = '';
+            msg.style.color = '#e74c3c';
+            msg.textContent = '';
+            document.querySelector('.login-trigger').innerHTML = '<i class="fas fa-user"></i> ' + user.username;
+        }, 800);
+    });
+
+    document.getElementById('loginPassword').addEventListener('keydown', function(e) { if (e.key === 'Enter') document.getElementById('loginSubmitBtn').click(); });
+    document.getElementById('regConfirm').addEventListener('keydown', function(e) { if (e.key === 'Enter') document.getElementById('registerSubmitBtn').click(); });
+})();
+</script>
+</body>
+</html>
